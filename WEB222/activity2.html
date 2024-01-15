@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JS Page</title>
+</head>
+<body>
+    <h1>Let's Count</h1>
+    <script>
+        for (let i = 1; i < 21; i++)
+        {
+            document.write(i);
+            document.write("<br>");
+        }
+    </script>
+    <h1>Find out your grade!</h1>
+    <script>
+        let grade = parseInt(prompt("Enter your grade: "));
+        document.write("You entered: " + grade + "<br>");
+        switch(true)
+        {
+            case grade < 50:
+                document.write("You got an F");
+                break;
+            case grade > 50 && grade < 59:
+                document.write("You got a D");
+                break;
+            case grade > 60 && grade < 69:
+                document.write("You got a C");
+                break;
+            case grade > 70 && grade < 79:
+                document.write("You got a B");
+                break;
+            case grade > 80 && grade <= 100:
+                document.write("You got an A");
+                break;
+            default:
+                alert("STOP LYING!");
+                grade = parseInt(prompt("Enter your grade: "));
+        }
+    </script>
+</body>
+</html>
