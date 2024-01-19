@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the area</title>
+    <script>
+        function calculateArea(width, leng)
+        {
+            let area = width * leng;    
+            return area;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        let width = parseFloat(prompt("Enter the width: "));
+        let length = parseFloat(prompt("Enter the length: "));
+        document.write("The area of the rectangle is: ", calculateArea(width, length))
+    </script>
+</body>
+</html>
