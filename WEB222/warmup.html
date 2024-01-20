@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Arithmetics</title>
+</head>
+<body>
+    <h1>Activity 1</h1>
+    <script>
+        // Activity 1
+        // What is the value of given variables:
+        var a = 10 % 2
+        document.write(a + "<br>");
+        var b = "10 " + "/" + " 2";
+        document.write(b + "<br>");
+        a = "Value=" + 3;
+        document.write(a + "<br>");
+        var c = !(10 / 2);
+        document.write(c + "<br>");
+        document.write("<h1>Activity 2</h1>");
+        
+        // Activity 2
+        let total = 0;
+
+        for (let i = 1; i <= 10; i++)
+        {
+            const priceEach = parseFloat(prompt("Enter the price for product:"))
+            if (isNaN(priceEach))
+            {
+                alert("Invalid input. Enter a valid number.");
+                i--;
+            }
+            else
+            {
+                total += priceEach;
+            }
+        }
+        document.write("Your total is: " + total);
+        document.write("<h1>Activity 3</h1>");
+
+        // Activity 3
+
+        let width = parseFloat(prompt("Enter the width: "));
+        let length = parseFloat(prompt("Enter the length: "));
+        let area = width * length;
+        document.write("The area of the rectangle is: ", area)
+    </script>
+</body>
+</html>

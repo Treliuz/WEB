@@ -1,9 +1,6 @@
-    //Function ddeclaration
-    function greeting(msg)
+    //Function declaration
+    function calculateArea(width, leng)
     {
-        document.write("Welcome " + msg);
-    }
-    function addValue(num)
-    {
-        return num + 10;
+        let area = width * leng;    
+        return area;
     }
