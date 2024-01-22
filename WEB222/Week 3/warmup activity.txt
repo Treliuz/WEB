@@ -1,0 +1,5 @@
+Warmup Activity
+
+The biggest difference between the displayes functions is it's declaration method. The first function is an example of a named declaration where the function is assigned a name and called as so 'square(x)'.
+The 2nd function is a function expression where a variable is declared and the function is assigned to the variable itself and is considered to be more flexible than the first declaration method.
+THe final function shown is simply a more concise way to declare a function with a much shorter syntax. Despite all their differences they all function in similar fashion and would output the same result.
