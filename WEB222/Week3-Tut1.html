@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects</title>
+</head>
+<body>
+    <script>
+        //define array
+        var cars = ['Toyota', 'Acura', 'Lexus', 'BMW'];
+        var cars2 = [];
+        var x = 3;
+        
+        for (let i = 0; i < x; i++) {
+            prompt("Enter car names: ");
+            document.write(cars2[i]);
+        }
+        // Display array
+        console.log(cars);
+        // Length of array
+        console.log(cars.length);
+        // Add an element to an array
+        cars.push('Audi');
+        // Sort the array Alphabetically (Ascending)
+        cars.sort();
+        // Sort the array in reverse
+        cars.reverse();
+        // Show array content at position
+        document.write(cars[0]);
+        // Show all array content
+        console.log(cars)
+        // or
+        for(let i = 0; i < cars.length; i++){
+            document.write(cars[i]);
+        }
+    </script>
+</body>
+</html>

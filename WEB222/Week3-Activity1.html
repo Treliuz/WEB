@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+</head>
+<body>
+    <script>
+        // Create array
+        var movies = ['Interstellar', 'Bee Movie', 'Everest', 'Dune', 'Avengers'];
+        // Display content
+        document.write("<h2> My favorite movies </h2>");
+        for(let i= 0; i < movies.length; i++){
+            document.write("<li>" + movies[i] + "</li>");
+        }
+        // Enter new movie
+        movies.push(prompt("Enter a new title for the list: "));
+        // Display array
+        document.write("<h2> Updated Movies </h2>");
+        for(let i = 0; i < movies.length; i++){
+            document.write("<li>" + movies[i] + "</li>");   
+        }
+        // Prompts for movie to find
+        let search = prompt("Enter movie you want to find: ");
+        //Check if movie is present
+        if(movies.includes(search)){
+            alert("This movie is in the list");
+        }
+        else{
+                alert("This movie is not in the list");
+        }
+    </script>
+</body>
+</html>
