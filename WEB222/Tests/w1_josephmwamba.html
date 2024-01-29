@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <script>
+        var weather = [22, 21, 23, 24, 25, "NA", 22, 19, 23, 24, 25, 26, 22, 18, 23, 24, "NA", 26, 22, 21, 23, 24, "NA", 26, 22, 21, 23, 24, 25, 26];
+
+        function findWeather(day_no) {
+            day_no = parseInt(day_no);
+
+            if (isNaN(day_no) || day_no < 1 || day_no > 30) {
+                alert("Enter a valid day number between 1 and 30.");
+                return;
+            }
+            // -1 because of index shenanigans
+            var tempToday = weather[day_no - 1];
+            var tempTmrw = "Not Available";
+
+            if (day_no < 30 && weather[day_no] !== "NA") {
+                tempTmrw = weather[day_no];
+            }
+            document.write("The temperature of day " + day_no + " is " + tempToday + " and for day " + (day_no + 1) + " it will be " + tempTmrw);
+        }
+
+        let input = prompt("Enter a day number (1-30):");
+        findWeather(input);
+    </script>
+
+</body>
+</html>
