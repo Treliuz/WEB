@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Current Date</title>
+    <title>Lab Answers</title>
 </head>
 <body>
     <script>
@@ -16,10 +16,15 @@
 
     <script>
         // Question 2
+        //Declaring variable dateString and assigning it a date
+        //let dateString = `17/02/2001`;
 
+        // splitting up the components of the string whenever a '/' is used
+        // stores each component until the '/' into the day, month and year variables
+        //let [day, month, year] = dateString.split('/');
 
-
-
+        //output the values in a string using the template literal expression
+        //console.log(`The day is ${day}, month is ${month}, and year is ${year}`);
     </script>
     
     <script>
@@ -34,8 +39,13 @@
 
     <script>
         let stringInput = prompt("Enter a string: ")
-        var pattern = /^\d\d[a-z]/;    
-        console.log(pattern.test(stringInput));
+        var pattern = /^\d\d[a-z]/; 
+        if (pattern.test(stringInput)) {
+            document.write("Pass");
+        }
+        else {
+            document.write("Try again later");
+        }
     </script>
 </body> 
 </html>
