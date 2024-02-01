@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Activity</title>
+    <script>
+        function changeData() {
+            let userInput = prompt("Enter the thing we learned:")
+            document.getElementsByTagName("li")[0].innerHTML = userInput;
+
+            // Change the content using getElementID()
+            let id_change = prompt("Enter the 2nd thing we learned");
+            document.getElementById("demo").innerHTML = id_change;
+            // Brackets = element
+            //Properties = no brackets
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to week 4</h1>
+    <p>This week we are practicing:</p>
+    <ul>
+        <li>DOM Properties</li>
+        <li id="demo">DOM Methods</li>
+    </ul>
+    <button onclick="changeData()"> Click me!</button>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+   yourname: Joseph Mwamba-Mukuna
+   studentID: 163997216
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Activity</title>
+    <script>
+        function addMovie(){
+            // Gets user's favorite movie
+            let movie_name = prompt("Enter your favoritte movie:")
+            // add this movie to the LIST below (id=loc)
+            document.getElementById("loc").innerHTML = movie_name; // This line goes to grab the id of the line we want to change
+            //keep content of first item but add (I), (II), (III), (IV)
+            document.getElementsByTagName("li")[0].innerHTML += "(I), (II), (III), (IV)"
+        }
+        function addMovie_By_Tag() {
+            // Get element from the tag
+            let movie_name_ByTag = prompt("Enter your favoritte movie:")
+            document.getElementsByTagName("li")[3].innerHTML = movie_name;
+        }
+    </script>
+</head>
+<body>
+    <h1> You favorite movie</h1>
+
+    <ol>
+        <li> Toys Story</li>
+        <li> Spiderman</li>
+        <li id="loc"></li>
+        <li></li>
+    </ol>
+    <!--
+        Adds a button that will call the function
+    -->
+    <button onclick="addMovie()">Click to add movie by ID </button>
+    </br>
+    <button onclick="addMovie_By_Tag()">Click to add movie by tag</button>
+</body>
+</html>
