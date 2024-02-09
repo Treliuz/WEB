@@ -1,0 +1,9 @@
+<!-- Explain what is the purpose of the follwing line? Customize if with yoru personal info -->
+      <!--This line creates a link that opens an email application to formulate an e-mail with a sender address auto-filled-->
+      <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
+
+<!--<div> is a container used to group HTML elements together
+    <main> is simply an indicator that contains the main content of the document much like int main() in C/++
+    <nav> is typically used for navigation purposes across the page
+    <header> is used mainly to represent the start of the page with introductory content like logos, etc
+    <footer> typically used to contain additional information like links, author names,etc-->
