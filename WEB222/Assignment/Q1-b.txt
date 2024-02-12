@@ -1,0 +1,10 @@
+Web Design Steps
+Determine the Intended Audience
+The colors, images, fonts, and layout should be tailored to the preferences of your audience. The type of site content (reading level, amount of animation, etc.) should be appropriate for your chosen audience.
+Determine the Goals of the Site
+Some common goals of websites are to be informative, to create a personal home page, to establish a corporate web presence, and to do business in e-commerce.
+Determine the General Content and Create a Site Map
+The site map is sometimes called a storyboard. Common organizational structures for websites are: hierarchical, linear, and random.
+Sketch a Tentative Page Layout
+Be consistent in your overall layout — color, typefaces, logo location, navigation bar, etc. Plan your home page layout to avoid scrolling. Plan your content page layout to be consistent, with easy navigation.
+Copyright  2014 Your name. All Rights Reserved.

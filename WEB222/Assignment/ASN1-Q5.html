@@ -1,0 +1,47 @@
+<!--/***************************************************************************** 
+* WEB222 – Assignment 1 
+* I declare that this assignment is my own work in accordance with Seneca Academic Policy. 
+* No part of this assignment has been copied manually or electronically from any other source 
+* (including web sites) or distributed to other students. 
+* 
+* Name: Joseph Mwamba-Mukuna Student ID: 163997163 Date: 11/02/2024 
+* 
+******************************************************************************/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Management</title>
+</head>
+<body>
+    <button onclick="main()">Set Appointment</button>
+    <script>
+        function getUserInfo() {
+          let firstName = prompt("Enter your first name:");
+          let lastName = prompt("Enter your last name:");
+          let appointmentDay = prompt("Enter your appointment day (Mon, Tue, Wed, Thu, Fri):");
+          return { firstName, lastName, appointmentDay };
+        }
+    
+        function available(appointmentDay) {
+          const availableList = ["Mon", "Wed", "Thu"];
+          return availableList.includes(appointmentDay);
+        }
+
+        function appointment(firstName, lastName, appointmentDay, isAvailable) {
+          if (isAvailable) {
+            document.write(`Dear ${firstName} ${lastName}, Your appointment is set on ${appointmentDay}.`);
+          } else {
+            document.write(`Dear ${firstName} ${lastName}, We can't schedule your appointment now.`);
+          }
+        }
+    
+        function main() {
+          const userInfo = getUserInfo();
+          const isAvailable = available(userInfo.appointmentDay);
+          appointment(userInfo.firstName, userInfo.lastName, userInfo.appointmentDay, isAvailable);
+        }
+    </script>
+</body>
+</html>
