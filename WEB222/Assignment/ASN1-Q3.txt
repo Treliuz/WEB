@@ -9,21 +9,21 @@
 ******************************************************************************/-->
  1) How to create an array with “new Array()” method and instantiate some values to the array?
     1a) You would call a new array object and assign it to a variable and in the parameter list you would enter whatever values you desire
-    let array = new Array("WEB", 222, "NCC");
+    	let array = new Array("WEB", 222, "NCC");
  2) How to show all the array contents with document.write (without loop)?
-    /* To show all the array contents you would simply do*/
+    	To show all the array contents you would simply do
     document.write(array);
  3) What does happen when you assign “null” to an array element and display that element (using document.write)?
-    // Nothing would appear on the screen when the array tries to print out null un less put between quotation marks
+    	Nothing would appear on the screen when the array tries to print out null un less put between quotation marks
  4) What is the output/main purpose of the following command document.write(arrayName.join(“*”))
-    // The main purpose of using join() is to concatenate the array elements together in a single string and seperates each element by an asterix "*"
+    	The main purpose of using join() is to concatenate the array elements together in a single string and seperates each element by an asterix "*"
  5) What is the output/main purpose of the following commands
         document.write(arrayName.lastIndexof(value));
-        // This returns the last index at which the given element can be found, if the element is not present it returns -1. 
-        // Say value has "apple" stored at index 3 and index 8 it will return '8'.
+        	This returns the last index at which the given element can be found, if the element is not present it returns -1. 
+        	Say value has "apple" stored at index 3 and index 8 it will return '8'.
         document.write(arrayName.indexof(value));
-        // This returns the first index at which the given element can be found, if the element is not present it returns -1. 
-        // Say value has "apple" stored at index 3 and index 8 it will return '3'.
+        	This returns the first index at which the given element can be found, if the element is not present it returns -1. 
+        	Say value has "apple" stored at index 3 and index 8 it will return '3'.
  6) How to merge two arrays?
-    You can merge arrays by concatenating to them together like so
+    	You can merge arrays by concatenating to them together like so
     let mergedArray = array1.concat(array2);
