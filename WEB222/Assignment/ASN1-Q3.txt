@@ -8,7 +8,7 @@
 * 
 ******************************************************************************/-->
  1) How to create an array with “new Array()” method and instantiate some values to the array?
-    1a) You would call a new array object and assign it to a variable and in the parameter list you would enter whatever values you desire
+     You would call a new array object and assign it to a variable and in the parameter list you would enter whatever values you desire
     	let array = new Array("WEB", 222, "NCC");
  2) How to show all the array contents with document.write (without loop)?
     	To show all the array contents you would simply do
