@@ -7,12 +7,16 @@
 * Name: Joseph Mwamba-Mukuna Student ID: 163997163 Date: 11/02/2024 
 * 
 ******************************************************************************/
-blockquote p{
-    margin: 0;
-}
-li {
-    font-weight: bold;
-}
-p {
-    margin: 0;
-}
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+readline.question('Enter a zipcode: ', (zipcode) => {
+    function validateZip(zipcode) {
+        var pattern =/^[A-Z]\d[A-Z]\d[A-Z]\d$/;
+        return pattern.test(zipcode);
+    }
+    console.log(validateZip(zipcode));
+readline.close();
+});
