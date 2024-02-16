@@ -3,37 +3,42 @@
         background-color: blue;
         height: 100px;
         width: 100px;
+        float: left;
     }
     #box2{
         background-color: orange;
         height: 100px;
         width: 100px;
+        float: left;
     }
     #box3{
         background-color: red;
         height: 100px;
         width: 100px;
+        float: left;
     }
 </style>
 <body>
-
     <div>
       <div id="box1">
-        <p>Joseph Mwamba-Mukuna</p>
+        <video width="100" height="100" autoplay>
+          <source src="./mandel.mp4" type="video/mp4">
+        </video> 
       </div>
-      <br>
-
+    </br>
       <div id="box2">
         <script>
-            var today = new Date();
-            document.getElementById("box2").innerText = today;
+          function displayDate() {
+            var today = new Date().toDateString();
+            var time = new Date().toLocaleTimeString();
+            document.getElementById("box2").innerText = today + time;
+          }
+          displayDate();
         </script>
       </div>
-      <br>
-
+    </br>
       <div id="box3">
-        <p>jmwamba-mukuna@myseneca.ca</p>
+        jmwamba-mukuna@myseneca.ca
       </div>
-
-    </div>
-  </body>
+  </div>
+</body>
