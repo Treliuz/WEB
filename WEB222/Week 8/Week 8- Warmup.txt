@@ -1,0 +1,20 @@
+Week 8 - Warmup
+
+-Q2
+There are 4 boxes in this webpage
+	-Header with animal hospital name
+	-Nav with links that change the content on the page
+	-Body/content with information about the hospital that can change depending on the
+	 link pressed
+	-Footer with email and copyright information
+-Q3
+It is external CSS since the style information is seperate from the main html page
+
+-Q4
+You would utilize the 'background-image' style of CSS
+
+-Q5
+To add a menu you can create a box with text inside that when clicked on, will jump to specific information on the page.
+
+-Q6 
+This helped me understand we use different font families at once to accomodate for different devices that may or may not have the font style/family we chose. As well as adding styles to specific parts of a tagname. (ex. nav ul, nav a:link)

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+    Web222 : Your name: Joseph Mwamba-Mukuna
+-->
+<style>
+    body{
+        background-color: lightblue;
+    }
+    img {
+        width:100px;
+        height: 100px;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Explore Web development</h1>
+    <table>
+        <tr>
+            <td>Year</td>
+            <td>Month</td>
+        </tr>
+        <tr>
+            <td id="year"></td>
+            <td id="month">
+                <script>
+                    function display() {
+                        const year = new Date().getFullYear();
+                        document.getElementById('year').innerHTML = year;
+                        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+                        const currentMonth = new Date().getMonth();
+                        let monthName = months[currentMonth];
+                        document.getElementById('month').innerHTML = monthName;
+                    }
+                </script>
+            </td>
+            
+        </tr>
+        <tr>
+            <td><img src="./images/imageA1.jpg"></td>
+            <td><img src="./images/imageA2.jpg"></td>
+        </tr>
+    </table>
+    <button onclick="display()">Show</button>
+</body>
+</html>

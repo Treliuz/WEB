@@ -1,0 +1,54 @@
+body { background-color: #6699ff;
+      background-image: url(gradientblue.jpg);
+      color: #d6e3ff;
+	  font-family: Verdana, Arial, sans-serif;
+	  /*Several fonts to accomodate for different devices 
+	  that may or may not have the necessary font*/
+}
+#wrapper { width: 80%;
+          margin-right: auto;
+		  margin-left: auto;
+		  min-width: 700px;
+		  max-width: 1024px;
+		  background-color: #FFFFFF;
+		  color: #000066;
+}
+header { background-color: #000066;
+       color: #FFFFFF;
+	   background-image: url(bigfish.gif);
+	   background-position: center;
+	   background-repeat: no-repeat;
+}
+h1 { text-align: center;
+     font-size: 3em;
+     padding: 10px;
+	 line-height: 150%;
+	 text-shadow: 3px 3px 3px #CCCCCC;
+}
+nav { font-weight: bold; 
+	 float: left;
+	 width: 150px;
+}
+nav ul { list-style-type: none; }
+nav a { text-decoration: none; }
+nav a:link { color: #3262A3; }
+nav a:visited { color: #6699FF; }
+nav a:hover { color: #CCCCCC; }
+.category { font-weight: bold;
+            background-color: #FFFFFF;
+			color: #003366;
+			font-size: 1.1em;
+			text-shadow: 1px 1px 1px #666;
+}
+main { margin-left: 180px;
+      padding-right: 20px;
+	  padding-bottom: 20px;
+}
+img { border-style: none; }
+footer { font-size: 0.70em;
+       font-style: italic;
+	   padding: 10px;
+	   margin-left: 180px;
+}
+footer nav { text-align: left; }
+header, main, nav, footer { display: block; }

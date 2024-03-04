@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <script>
+        function formProcess() {
+            alert("Coming soon!");
+        }
+    </script>
+</head>
+<body>
+
+    <form>
+        <p>Enter your name: <input type="text"></p>
+        <p>Enter your age: <input type="number"></p>
+        <p>Enter your password: <input type="password"></p>
+        <p>
+            <label for="city">City:</label>
+                <select name="city" id="city">
+                    <option selected disabled></option>
+                    <option value="Tor">Toronto</option>
+                    <option value="Mon">Montreal</option>
+                    <option value="Van">Vancouver</option>
+                </select>
+        </p>
+        <!-- <button>Save name</button> -->
+        <!--Figure out how to save/display info entered-->
+        <input type="button" value="Save info" onclick="formProcess()">
+        <input type="reset" value="Clear Form">
+        <input type="file">
+    </form>
+</body>
+</html>

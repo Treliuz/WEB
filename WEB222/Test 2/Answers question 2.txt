@@ -1,0 +1,13 @@
+A) From your point of view, identify how the main building blocks of the page is being implemented using HTML (name HTML tags)
+	The main builing blocks of the page would be the header with the name of the shop,
+	The nav which lets the user jump to different parts of the website
+	The footer with copy right information
+	The article which will hold the menu items with descriptions and price
+B) Also explain if want to implement the page, how do you structure the layout. (how many boxes) 
+My layout would contain 8 boxes total
+1. For the header
+2.For the nav section
+3. For the footer
+4. The middle part of the page that holds the main menu
+5. Box for the entire menu
+6,7,8. Would be the 3 columns for the menu item name, description and price
