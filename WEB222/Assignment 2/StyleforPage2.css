@@ -1,0 +1,111 @@
+/* ***************************************************************************** 
+* WEB222 – Assignment 2 
+* I declare that this assignment is my own work in accordance with Seneca Academic Policy. 
+* No part of this assignment has been copied manually or electronically from any other source 
+* (including web sites) or distributed to other students. 
+* 
+* Name: Joseph Mwamba-Mukuna Student ID: 163997216 Date: 06/03/2024 
+* ******************************************************************************/
+body{
+    background-color: #656868;
+    font-family: sans-serif;
+}
+.wrapper{
+    width: 640px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
+    background-color: #F4F4EE;
+}
+.header{ 
+    width: 640px;
+    max-height: 140px;
+    float: left;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 49px;
+    background-image: url('./img/header.jpg');
+    background-repeat: no-repeat;
+}
+header div{
+    margin: 5px;
+}
+#title{
+    font-weight: bold;
+    font-size: 24px;
+    color: #FCF8E3;
+}
+#desc{
+    font-weight: bold;
+    color: #E2D179;
+}
+
+.main{
+    background-image: url('./img/page_bg.jpg');
+    width: 640px;
+    height: 700px;
+}
+.sidebar{
+    width: 160px;
+    height: auto;
+    float: right;
+}
+.sidebar p{
+    padding-left: 10px;
+    font-size: 14px;
+}
+.sidebar li{
+    list-style: square;
+    font-size: 11px;
+}
+li::marker{
+    font-size: 21px;
+}
+
+#special{
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color:#FCF8E3;
+    background-color: #595A38;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #3A3B22;
+}
+
+.content{
+    margin-top: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 460px;
+    height: auto;
+    float: left;
+}
+.content div{
+    color: #333333;
+    font-size: 14px;
+}
+h4{
+    color: #a0410d;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer{
+    max-height: 70px;
+    width: 640px;
+    text-align: center;
+    color: #FCF8E3;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./img/footer.jpg');
+}
