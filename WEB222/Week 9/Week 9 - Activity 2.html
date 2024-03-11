@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        if(document.getElementById("field").value == '') {
+        alert("Error: Problem field cannot be empty");
+        document.getElementById("field").style.display ="none";
+        document.getElementById('field').focus();
+
+    }
+    </script>
+</head>
+<body>
+    <form action="validated.html">
+        <p>Username <input type="text"></p>
+        <p>Fullname <input type="text"></p>
+        <p>Email <input type="text"></p>
+        <p>Date <input type="date"></p>
+        <p>Problem <input type="text" placeholder="I'm having a problem with the..." onblur="isEmpty()" id="field"></p>
+        <textarea name="message" rows="10" cols="30" placeholder="What's happening?">
+        </textarea> 
+        <br>
+        <p>File Upload <input type="file"></p>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 Tutorial 1</title>
+    <!--Validation function-->
+    <script>
+        function verify(){
+            let Age = document.getElementById('age').value;
+
+            if (Age > 15) {
+                document.getElementById('status').innerHTML = "Valid";
+                document.getElementById('age').style.borderColor="";
+            }
+            else {
+                document.getElementById('status').innerHTML = "Invalid"; 
+                document.getElementById('age').style.borderColor="red";  
+                document.getElementById('age').focus();
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--From action will bring us to a difference page/function when directed-->
+    <!-- <form action="process.html" method="get">
+        Name:<input type="text" placeholder="Enter" name="Fullname">
+        <input type="submit" value="submit">
+    </form> -->
+
+    <!--Built in email validation-->
+    <!-- <form>
+        Email:<input type="email" placeholder="Enter" name="Email">
+        <input type="submit" value="submit">
+    </form> -->
+
+    <!--Password length validation-->
+    <!-- <form>
+        Password:<input type="password" placeholder="Enter your PW" name="password" minlength="6">
+        <input type="submit" value="submit">
+    </form> -->
+
+    <!--Using onclick to jump to function and id to get html data-->
+    <form>
+        name:<input type="text" placeholder="Enter your name" id="Fname">
+        <br><br>
+        Age:<input type="number" placeholder="Enter your age" id="age" onblur="verify()">
+        <span id="status"></span>
+        <br><br>
+        address:<input type="text" placeholder="Enter your address" id="address">
+        <input type="button" value="submit" >
+    </form>
+</body>
+</html>
