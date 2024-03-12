@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validated!!</title>
+    <script>
+        const problem = document.querySelector('input[name="problem"]').value;
+        if (problem.trim() === '') {
+                alert('Problem field cannot be blank!');
+                return;
+            }
+
+        const username = document.querySelector('input[name="username"]').value;
+        const fullname = document.querySelector('input[name="fullname"]').value;
+        const email = document.querySelector('input[name="email"]').value;
+        const date = document.querySelector('input[name="date"]').value;
+        const file = document.querySelector('input[name="file"]').value;
+
+        const formData = {
+            "Username": username,
+            "Fullname": fullname,
+            "Email": email,
+            "Date": date,
+            "Problem": problem,
+            "File": file
+        };
+
+        const formOutput = document.getElementById('form-output');
+        formOutput.innerHTML = '';
+            
+        for (const [key, value] of Object.entries(formData)) {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${key}: ${value}`;
+            formOutput.appendChild(listItem);
+        }
+
+        formOutput.style.display = 'block';
+    </script>
 </head>
 <body>
     <!--Use getElementBy... to get and change data-->
     "Thanks for submitting the form, here is what you submitted":
-        >>Username:
-        >>Fullname:
-        >>Email:
-        >>Date:
-        >>Problem:
 </body>
 </html>

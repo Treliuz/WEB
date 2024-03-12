@@ -3,29 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Week 9 - Activity 2</title>
     <script>
-        if(document.getElementById("field").value == '') {
-        alert("Error: Problem field cannot be empty");
-        document.getElementById("field").style.display ="none";
-        document.getElementById('field').focus();
+        function Submit(event) {
+            event.preventDefault();
+            
+            const problem = document.querySelector('input[name="problem"]').value;
+            if (problem.trim() === '') {
+                alert('Problem field cannot be blank!');
+                return;
+            }
 
-    }
+            const username = document.querySelector('input[name="username"]').value;
+            const fullname = document.querySelector('input[name="fullname"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const date = document.querySelector('input[name="date"]').value;
+            const file = document.querySelector('input[name="file"]').value;
+
+            const formData = {
+                ">> Username": username,
+                ">> Fullname": fullname,
+                ">> Email": email,
+                ">> Date": date,
+                ">> Problem": problem,
+                ">> File": file
+            };
+
+            const formOutput = document.getElementById('form-output');
+            formOutput.innerHTML = '';
+            
+            for (const [key, value] of Object.entries(formData)) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${key}: ${value}`;
+                formOutput.appendChild(listItem);
+            }
+
+            formOutput.style.display = 'block';
+        }
     </script>
 </head>
 <body>
-    <form action="validated.html">
-        <p>Username <input type="text"></p>
-        <p>Fullname <input type="text"></p>
-        <p>Email <input type="text"></p>
-        <p>Date <input type="date"></p>
-        <p>Problem <input type="text" placeholder="I'm having a problem with the..." onblur="isEmpty()" id="field"></p>
-        <textarea name="message" rows="10" cols="30" placeholder="What's happening?">
-        </textarea> 
+    <form onsubmit="Submit(event)">
+        <p>Username <input type="text" name="username"></p>
+        <p>Fullname <input type="text" name="fullname"></p>
+        <p>Email <input type="email" name="email"></p>
+        <p>Date <input type="date" name="date"></p>
+        <p>Problem <input type="text" name="problem" placeholder="I'm having a problem with the..."></p>
+        <textarea name="message" rows="10" cols="30" placeholder="What's happening?"></textarea> 
         <br>
-        <p>File Upload <input type="file"></p>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
+        <p>File Upload <input type="file" name="file"></p>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
     </form>
 </body>
 </html>
