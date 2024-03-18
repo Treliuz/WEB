@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation and Submission</title>
+<style>
+    .error {
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<form id="myForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br>
+    <button type="submit">Submit</button>
+</form>
+
+<div id="output"></div>
+
+<script>
+    const form = document.getElementById('myForm');
+    const outputDiv = document.getElementById('output');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+       // if (validateForm()) {
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            displayOutput(data);
+        //}
+    });
+
+    function validateForm() {
+        let isValid = true;
+        const inputs = form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            if (!input.checkValidity()) {
+                isValid = false;
+                input.classList.add('error');
+            } else {
+                input.classList.remove('error');
+            }
+        });
+        return isValid;
+    }
+
+    function displayOutput(data) {
+        let output = "<h2>Submitted Data:</h2>";
+        output += "<ul>";
+        for (const key in data) {
+            output += `<li><strong>${key}:</strong> ${data[key]}</li>`;
+        }
+        output += "</ul>";
+        outputDiv.innerHTML = output;
+    }
+</script>
+
+</body>
+</html>

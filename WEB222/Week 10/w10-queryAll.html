@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> A.Spring </p>
+    <p> B.Summer </p>
+    <p> C.Fall </p>
+    <p> D.Winter </p>
+    <p> ==>Your favorite?</p>
+
+    <h1>Output: <span></span></h1>
+
+    <script>
+        document.body.addEventListener('click', handleClick);
+        function handleClick(e) {
+            //Block A
+            let n = document.getElementsByTagName("p").length;
+            for (let i = 0; i < n; i++) {
+                x = document.getElementsByTagName("p").item(i).innerHTML;
+                document.getElementsByTagName("span").item(0).innerHTML += x;
+            }
+
+
+            BlockB
+            let pElements = document.querySelectorAll('p');
+            // Loop through all returned <p> elements in our list
+            pElements.forEach(function (p) {
+                // p is one of the returned <p> elements
+                console.log(p);
+                document.getElementsByTagName("span").item(0).innerHTML += p;
+            });
+        }
+    </script>
+</body>
+
+</html>

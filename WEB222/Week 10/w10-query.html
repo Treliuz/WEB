@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector Example</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>querySelector Example</h2>
+    <p>This is a paragraph with <span id="highlightedText">highlighted</span> text.</p>
+    <button id="highlightButton">Highlight Text</button>
+
+    <script>
+        // Select the span element with id 'highlightedText'
+        const highlightedText = document.querySelector('#highlightedText');
+
+        // Add a click event listener to the button
+        document.getElementById('highlightButton').addEventListener('click', () => {
+            // Toggle the 'highlight' class on the span element
+            highlightedText.classList.toggle('highlight');
+        });
+    </script>
+</body>
+</html>

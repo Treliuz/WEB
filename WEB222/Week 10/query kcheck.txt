@@ -1,0 +1,17 @@
+QuerySelector
+-------------------
+document.querySelector returns the first '#highlightedText' element within the document and stores its information in variable highlightedText
+
+addEventListener is checking for the clicking of the button and executes a method when a click is received
+
+highlightedText.classList.toggle returns the DOMTokenList of a classname 'highlightedText' and toggle switches through the different tokens acquired. 
+
+QuerySelectorAll
+--------------------
+handleClick(e) function that will determine take the event of any input press and change the innnerHtml of the event of which it was called
+
+document.body.addEventListener('click', handleClick) eventListener that checks for any click on the body of the page and directs us to the handleClick function
+
+document.querySelectorAll('p') returns every element with the 'p' tag and assigns it to a variable
+
+pElements.forEach(function (p) calls an function for each element of p

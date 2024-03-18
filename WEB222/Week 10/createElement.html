@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let number = prompt("How manny buttons would you like to see?");
+        Show();
+        function Show(){
+        
+        for(i=0;i<number;i++){
+        
+        //Step1: Create a new Element Node
+        
+        var parent = document.createElement("li");  
+        
+        //Step2: Create a new Text Node
+        
+        var child = document.createTextNode("Click Me");    
+        
+        //Step3: Link the Element Node to the Text node
+        
+        parent.appendChild(child);              
+        
+        //Step4: Display the new element/text on the page   
+        
+        document.getElementById("location").appendChild(parent);
+        
+        }
+        
+        }
+        
+        </script>
+</head>
+<body>
+    <h1>WEB222-Week 10</h1>
+<p id="location"> </p>
+<h2> July 10, 2023 </h2>
+
+<button onClick="Show()">Click Me</button>
+</body>
+</html>

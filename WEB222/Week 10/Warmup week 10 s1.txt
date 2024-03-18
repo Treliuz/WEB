@@ -1,0 +1,13 @@
+form.addEventListener will check for an event that occurs from the form variable which is assigned to the Elelment ID of the form.
+
+formData = new FormData(form) is creating a new FormData object with the elements of the current form variable.
+
+displayOutput(data) is the function call to the displaying of the form data inputs
+
+function validateForm() is a function that will check if the form has met all the necessary requirements for the form to submit on the JS side.
+
+form.querySelectorAll will check and get all elements specified withing its parameters (similar to getElementByID).
+
+input.checkValidity() will check if the constraints have been respected and will return true or false depending on if they were respected or not.
+
+inputs.forEach pseudo for loop that will read the keys and value of the inputs.
