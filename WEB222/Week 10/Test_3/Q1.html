@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 3</title>
+    <script>
+        function Calculate() {
+            Validate();
+            const price = document.querySelector('input[name="price"]').value;
+            const tax = document.querySelector('input[name="tax"]').value;
+            const total = price * (1 + (tax / 100));
+            const output  = document.getElementById('total').innerHTML = `Total : ${total}`;
+        }
+        function Validate() {
+            const price = document.querySelector('input[name="price"]').value;
+            const tax = document.querySelector('input[name="tax"]').value;
+            if(price < 200 || price > 2000){
+                document.getElementById('status p').innerHTML = "Invalid";
+                document.getElementById('price').focus();
+            }
+            if (tax < 8 || tax > 13){
+                document.getElementById('status t').innerHTML = "Invalid";
+                document.getElementById('tax').focus();
+            }
+        }   
+    </script>
+    <style>
+        form{
+            padding: 20px;
+            border-radius: 3px;
+            border-width: 2px;
+            width: 300px;
+            border-color: black;
+            border-style: double;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <span id="status p"></span>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price"><br><br>
+        <span id="status t"></span>
+        <label for="tax">Tax:</label>
+        <input type="number" id="tax" name="tax"><br><br>
+        <input type="button" id="calculate" name="calculate" value="Calculate" onclick="Calculate()"><br><br>
+        <p id="total">Total : </p>
+    </form>
+</body>
+</html>
+<!-- Onclick would occur when the input area is clicked
+     Onblur would occur when the input area is left 
+    Focus occurs when called to bring user to designated input area -->
