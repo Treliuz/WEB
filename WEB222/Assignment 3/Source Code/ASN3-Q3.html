@@ -1,28 +1,64 @@
-<!doctype html>
-<html>
+<!-- ***************************************************************************** 
+* WEB222 – Assignment 3 
+* I declare that this assignment is my own work in accordance with Seneca Academic Policy. 
+* No part of this assignment has been copied manually or electronically from any other source 
+* (including web sites) or distributed to other students. 
+* 
+* Name: Joseph Mwamba-Mukuna Student ID: 163997216 Date: 26/03/2024 
+* ****************************************************************************** -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!--
-Web222, Assingment3
-Professor: Shahdad
--->
-<meta charset="utf-8">
-<title>Web222: yourname</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-
 <body>
-<h2>My Favorite CDs</h2>
-<p>
-  <label for="select">Select the number of CDs you want to add to your list:</label>
-  <select name="select" id="select">
-    <option value="0">Select</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-  </select>
-</p>
-<p><input type="button" id="button"  value="Create entry form" />
-</p>
+  <h2>My Favorite CDs</h2>
+  <p>
+    <label for="select">Select the number of CDs you want to add to your list:</label>
+    <select name="select" id="select">
+      <option value="0">Select</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </p>
+  <p><input type="button" id="button"  value="Create entry form" /></p>
+  <p id="output"></p>
+  <script>
+    document.getElementById('button').addEventListener('click', function(event) {
+      function Display() {
+        const value = document.getElementById('select').value;
+        const button = document.createElement("button");
+        button.innerText = "Add CDs to list";
+        const output = document.getElementById('output');
+        output.innerHTML = '';
+        for (let i = 0; i < value; i++) {
+          const name = document.createElement("label");
+          const nameIn = document.createElement("input");
+          const price = document.createElement("label");
+          const priceIn = document.createElement("input");
+
+          name.textContent = `Name of CD ${i + 1}: `;
+          nameIn.setAttribute("type", "text");
+
+          price.textContent = ` Price of CD ${i + 1}: `;
+          priceIn.setAttribute("type", "text");
+
+          output.appendChild(name);
+          output.appendChild(nameIn);
+          output.appendChild(price);
+          output.appendChild(priceIn);
+          output.appendChild(document.createElement("br"));
+          output.appendChild(document.createElement("br"));
+        }
+        output.appendChild(button);
+      }
+      Display();
+    });
+  </script>
 </body>
 </html>
