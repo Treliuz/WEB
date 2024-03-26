@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+<body>
+        <form>
+            <h1>Payment Form</h1>
+            <fieldset>
+                <legend>Billing Information (required)</legend>
+                <div class="form-group">
+                    <label for="First">First Name</label>
+                    <input type="text" name="Billing" id="First" required>
+                </div>
+                <div class="form-group">
+                    <label for="Last">Last Name</label>
+                    <input type="text" name="Billing" id="Last" required>
+                </div>
+                <div class="form-group">
+                    <label for="City">City</label>
+                    <input type="text" name="Billing" id="City" required>
+                </div>
+                <div class="form-group">
+                    <label for="State">State</label>
+                    <select id="state" class="Billing" required>
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="AB">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="MB">Manitoba</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="NL">Newfoundland</option>
+                        <option value="NT">NW Territories</option>
+                        <option value="NS">Nova Scotia</option>
+                        <option value="NU">Nunavut</option>
+                        <option value="ON">Ontario</option>
+                        <option value="PE">P.E.I</option>
+                        <option value="QC">Quebec</option>
+                        <option value="SK">Saskatchewan</option>
+                        <option value="YT">Yukon</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip/Postal Code</label>
+                    <input type="text" id="zip" name="zip" pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d" class="Billing" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Credit Card (required)</legend>
+                <div class="form-group">
+                    <div class="credit-card">
+                        <input type="radio" name="CC" id="diners">
+                        <label for="diners"><img src="./diners.png" alt="Diners Club"></label>
+                    </div>
+                    <div class="credit-card">
+                        <input type="radio" name="CC" id="discover">
+                        <label for="discover"><img src="./discover.png" alt="Discover"></label>
+                    </div>
+                    <div class="credit-card">
+                        <input type="radio" name="CC" id="master">
+                        <label for="master"><img src="./master.png" alt="Mastercard"></label>
+                    </div>
+                    <div class="credit-card">
+                        <input type="radio" name="CC" id="visa">
+                        <label for="visa"><img src="./visa.png" alt="Visa"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="CC#">Credit Card Number</label>
+                    <input type="text" name="CC" id="CC#" required>
+                </div>
+                <div class="form-group">
+                    <label for="exp">Expiration Date</label>
+                    <input type="text" name="CC" id="exp" placeholder="mm/dd/yyyy" required>
+                </div>
+                <div class="form-group">
+                    <label for="CVV">CSC</label>
+                    <input type="text" name="CC" id="CVV" pattern="\d\d\d" placeholder="nnn" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Information</legend>
+                <div class="form-group">
+                    <label for="email">Contact Email</label>
+                    <input type="email" name="info" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="notes">Special Notes</label>
+                    <textarea name="info" id="notes" style="height: 100px;"></textarea>
+                </div>
+            </fieldset>
+            <input type="submit" value="Submit Order" class="submit">
+        </form>
+        <script src="./ASN3-Script.js"></script>
+</body>
+</html>

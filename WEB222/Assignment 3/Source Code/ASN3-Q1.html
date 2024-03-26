@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <script>
+        function Validation() {
+            const sci = parseInt(document.querySelector('input[name="science"]').value);
+            if (sci < 0 || sci > 100) {
+                document.getElementById('sci_err').innerHTML = "Mark rankge: (0~100)";
+            }
+            else {
+                document.getElementById('sci_err').innerHTML = "";
+            }
+            const math = parseInt(document.querySelector('input[name="math"]').value);
+            if (math < 0 || math > 100){
+                document.getElementById('math_err').innerHTML = "Mark rankge: (0~100)";
+            }
+            else {
+                document.getElementById('math_err').innerHTML = "";
+            }
+            const eng = parseInt(document.querySelector('input[name="english"]').value);
+            if (eng < 0 || eng > 100){
+                document.getElementById('eng_err').innerHTML = "Mark rankge: (0~100)";
+            }
+            else {
+                document.getElementById('eng_err').innerHTML = "";
+            }
+            Calculate();
+        }
+
+        function Calculate() {
+            const sci = parseInt(document.querySelector('input[name="science"]').value);
+            const math = parseInt(document.querySelector('input[name="math"]').value);
+            const eng = parseInt(document.querySelector('input[name="english"]').value);
+            const avg = (sci + math + eng) / 3;
+            document.querySelector('input[name="average"]').value = avg;
+        }
+    </script>
+</head>
+<body>
+    <fieldset style="width:270px">
+        <legend>School Calculator</legend> 
+        <label>Science Mark:</label>
+        <input type="number" name="science" oninput="Validation()"><br/>
+        <span id="sci_err"></span><br>
+        <label>Math Mark:</label>
+        <input type="number" name="math" oninput="Validation()"></label><br />
+        <span id="math_err"></span><br>
+        <label>English Mark:</label>
+        <input type="number" name="english" oninput="Validation()"></label><br />
+        <span id="eng_err"></span> <br>
+        <label>Average:</label>
+        <input type="number" name="average" value="0"readonly></label>
+    </fieldset>
+</body>
+</html>
