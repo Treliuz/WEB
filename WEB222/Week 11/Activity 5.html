@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+</head>
+<body>
+    <form id="cityForm">
+        <label for="cityInput">Enter City Name:</label>
+        <input type="text" id="cityInput" required>
+        <button type="submit">Get Temperature</button>
+    </form>
+    <p id="output"></p>
+    <script>
+        document.getElementById('cityForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let city = document.getElementById('cityInput').value;
+            fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7e879ff27b70ff2a1dfc3b39f253d3a0&units=metric`)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(json) {
+                console.log(json);
+                let display = "<h2>Current Temperature:</h2>";
+                display += `<p>${json.main.temp} Celcius</p>`;
+                document.getElementById('output').innerHTML = display;
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warmup</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let json = [
+        {"id":1,"first_name":"Rickard","last_name":"Mallion","email":"rmallion0@comcast.net","ip_address":"300-923-5556"},
+        {"id":2,"first_name":"Rheba","last_name":"Petrie","email":"rpetrie1@altervista.org","ip_address":"967-531-4249"},
+        {"id":3,"first_name":"Ailsun","last_name":"McTerlagh","email":"amcterlagh2@shinystat.com","ip_address":"800-126-8735"},
+        {"id":4,"first_name":"Norene","last_name":"Gribbin","email":"ngribbin3@buzzfeed.com","ip_address":"160-149-4341"},
+        {"id":5,"first_name":"Germaine","last_name":"Edwardson","email":"gedwardson4@hao123.com","ip_address":"298-346-4142"},
+        {"id":6,"first_name":"Domini","last_name":"Sleight","email":"dsleight5@vkontakte.ru","ip_address":"119-784-1882"},
+        {"id":7,"first_name":"Jonah","last_name":"Adlard","email":"jadlard6@baidu.com","ip_address":"792-743-0845"},
+        {"id":8,"first_name":"Eve","last_name":"Shade","email":"eshade7@merriam-webster.com","ip_address":"284-692-8851"},
+        {"id":9,"first_name":"Odelinda","last_name":"Moynham","email":"omoynham8@globo.com","ip_address":"512-869-3362"},
+        {"id":10,"first_name":"Hendrick","last_name":"Windless","email":"hwindless9@mozilla.org","ip_address":"671-632-2325"}
+        ]
+        console.log(json);
+        let output = "<table border = 1>";
+        for (i = 0; i < json.length; i++) {
+            output += "</tr>";
+            output += "<td>" + json[i].first_name + "</td>";
+            output += "<td>" + json[i].last_name + "</td>";
+            output += "<td>" + json[i].email + "</td>";
+            output += "<td>" + json[i].ip_address + "</td>";
+            output += "</tr>";
+        }
+        output += "</table>";
+        document.getElementById('output').innerHTML = output;
+
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>

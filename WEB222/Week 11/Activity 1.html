@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 1</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        // Reading JSON file
+        fetch('./MOCK_DATA.json').then(function(response) {
+            return (response.json())
+        }).then(function(json) {
+            console.log(json)
+            console.log(json);
+            let output = "<table border = 1>";
+            for (i = 0; i < json.length; i++) {
+                output += "</tr>";
+                output += "<td>" + json[i].first_name + "</td>";
+                output += "<td>" + json[i].last_name + "</td>";
+                output += "<td>" + json[i].email + "</td>";
+                output += "<td>" + json[i].ip_address + "</td>";
+                output += "</tr>";
+            }
+            output += "</table>";
+            document.getElementById('output').innerHTML = output;
+        });
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>

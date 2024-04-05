@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 3</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        fetch('http://api.openweathermap.org/data/2.5/weather?q=London&appid=7e879ff27b70ff2a1dfc3b39f253d3a0').then(function(response) {
+            return (response.json())
+        }).then(function(json){
+            console.log(json)
+            console.log(json.main.temp);
+            let display = "<h1> Current temp is: </h1>";
+            display += json.main.temp;
+            document.getElementById('output').innerHTML = display;
+        });
+    </script>
+</body>
+</html>
