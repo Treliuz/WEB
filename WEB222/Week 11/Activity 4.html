@@ -8,7 +8,8 @@
 <body>
     <p id="output"></p>
     <script>
-        fetch('http://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=7e879ff27b70ff2a1dfc3b39f253d3a0&units=metric').then(function(response) {
+        fetch('http://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=7e879ff27b70ff2a1dfc3b39f253d3a0&units=metric')
+        .then(function(response) {
             return (response.json())
         }).then(function(json){
             console.log(json)
