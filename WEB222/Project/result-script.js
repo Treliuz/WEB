@@ -56,19 +56,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const charDC = params.dc || 'Data Center';
     const charServer = params.server || 'Server';
     const characterImage = params.image || '';
-    const mountImage = params.mount_image || '';
+    //const mountImage = params.mount_image || '';
 
     const characterNameElement = document.getElementById('name');
     const characterDCElement = document.getElementById('DC');
     const characterServerElement = document.getElementById('server');
     const characterImageElement = document.querySelector('.portrait');
-    const mountImageElement = document.querySelector('.mountImg');
+    //const mountImageElement = document.querySelector('.mountImg');
 
     characterNameElement.textContent = characterName;
     characterDCElement.textContent = `Data Center: ${charDC}`;
     characterServerElement.textContent = `Server: ${charServer}`;
     characterImageElement.src = characterImage;
-    mountImageElement.src = mountImage; 
+    //mountImageElement.src = mountImage; 
 
     const mountsCount = params.mounts_count || 0; 
     const mountsTotal = params.mounts_total || 1; 
