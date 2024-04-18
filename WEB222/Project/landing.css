@@ -248,13 +248,14 @@ a:active {
 }
 
 .search-bar {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 10px;
   position: absolute;
-  width: 30%; /* Updated to fill 30% of the width */
+  width: 250px; 
   height: 63px;
   top: 0;
   left: 0;
@@ -300,6 +301,7 @@ a:active {
 }
 
 .classic-button {
+  position: absolute;
   display: flex;
   align-items: center;
   margin-left: 220px;
